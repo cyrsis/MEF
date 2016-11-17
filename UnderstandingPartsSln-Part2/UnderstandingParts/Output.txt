@@ -1,0 +1,53 @@
+﻿--- Catalog AssemblyCatalog (Assembly="UnderstandingParts, Version=1.0.0.0, Cult
+ure=neutral, PublicKeyToken=null") ---
+
+... Part UnderstandingParts.PartOne ...
+
+.... With Import UnderstandingParts.PartOne.ObjectImport (ContractName="System.O
+bject")
+....... Cardinality ExactlyOne
+....... Constraint exportDefinition => (exportDefinition.ContractName == "System
+.Object")
+
+.... With Import UnderstandingParts.PartOne.SpecialTextImport (ContractName="Spe
+cialText")
+....... Cardinality ExactlyOne
+....... Constraint exportDefinition => ((exportDefinition.ContractName == "Speci
+alText") AndAlso (exportDefinition.Metadata.ContainsKey("ExportTypeIdentity") An
+dAlso "System.String".Equals(exportDefinition.Metadata.get_Item("ExportTypeIdent
+ity"))))
+
+.... With Exports => Export UnderstandingParts.PartOne.SimpleText (ContractName=
+"System.String")
+.... With Exports .... => Key: ExportTypeIdentity: System.String
+
+.... With Exports => Export UnderstandingParts.PartOne.MoreSimpleText (ContractN
+ame="MoreSimpleText")
+.... With Exports .... => Key: ExportTypeIdentity: System.String
+
+.... With Exports => Export UnderstandingParts.PartOne.MoreSimpleText (ContractN
+ame="System.String")
+.... With Exports .... => Key: ExportTypeIdentity: System.String
+
+... Part UnderstandingParts.PartTwo ...
+
+.... With Import UnderstandingParts.PartTwo.TextArray (ContractName="System.Stri
+ng")
+....... Cardinality ZeroOrMore
+....... Constraint exportDefinition => ((exportDefinition.ContractName == "Syste
+m.String") AndAlso (exportDefinition.Metadata.ContainsKey("ExportTypeIdentity")
+AndAlso "System.String".Equals(exportDefinition.Metadata.get_Item("ExportTypeIde
+ntity"))))
+
+.... With Exports => Export UnderstandingParts.PartTwo.SpecialTextExport (Contra
+ctName="SpecialText")
+.... With Exports .... => Key: ExportTypeIdentity: System.String
+.... With Exports => Export UnderstandingParts.PartTwo.ObjectText (ContractName=
+"System.Object")
+.... With Exports .... => Key: ExportTypeIdentity: System.Object
+
+Done Debugging.
+
+Text: Simple Text
+Text: More Simple Text.
+Special Text: Special Text

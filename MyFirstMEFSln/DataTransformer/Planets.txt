@@ -1,0 +1,10 @@
+﻿Name,DiameterKm,Gravity
+Mercury,4878,0.38
+Venus,12104,0.91
+Earth,12756,1
+Mars,6787,0.38
+Jupiter,142800,2.54
+Saturn,120000,1.08
+Uranus,51200,0.91
+Neptune,48600,1.19
+Pluto,2300,0.05

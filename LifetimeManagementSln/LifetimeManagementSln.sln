@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifetimeManagement", "LifetimeManagement\LifetimeManagement.csproj", "{000AC226-0555-45CD-A028-CE0CA0A27F23}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{000AC226-0555-45CD-A028-CE0CA0A27F23}.Debug|x86.ActiveCfg = Debug|x86
+		{000AC226-0555-45CD-A028-CE0CA0A27F23}.Debug|x86.Build.0 = Debug|x86
+		{000AC226-0555-45CD-A028-CE0CA0A27F23}.Release|x86.ActiveCfg = Release|x86
+		{000AC226-0555-45CD-A028-CE0CA0A27F23}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
